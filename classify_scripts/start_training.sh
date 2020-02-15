@@ -104,7 +104,7 @@ else
     --save_interval_secs=60 \
     --save_summaries_secs=60 \
     --log_every_n_steps=20 \
-    --optimizer=sgd \
+    --optimizer=adam \
     --weight_decay=0.00004 \
     --quantize_delay="${quantize_delay}" \
     --clone_on_cpu \

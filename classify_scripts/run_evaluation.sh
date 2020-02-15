@@ -38,7 +38,7 @@ image_size="${image_size_map[${network_type}]}"
 python eval_image_classifier.py \
   --checkpoint_path="${TRAIN_DIR}" \
   --eval_dir="${TRAIN_DIR}" \
-  --dataset_name=flowers \
+  --dataset_name=ladd \
   --dataset_split_name=validation \
   --dataset_dir="${DATASET_DIR}" \
   --model_name="${network_type}" \

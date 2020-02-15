@@ -57,7 +57,7 @@ ckpt_name="${ckpt_name_map[${network_type}]}"
 
 # Because the pre-trained checkpoints are based on ImageNet, which has 1000
 # labels, and your custom dataset usually has a different number of labels
-# (which is true with the flowers dataset), you should exclude the last layer
+# (which is true with the ladd dataset), you should exclude the last layer
 # when loading the pre-trained checkpoint. This can be specified through
 # checkpoint_exclude_scopes flag.
 scopes="${scopes_map[${network_type}]}"
@@ -66,7 +66,7 @@ if [[ "${train_whole_model}" == "true" ]]; then
   echo "TRAINING all layers ..."
   python train_image_classifier.py \
     --train_dir="${TRAIN_DIR}" \
-    --dataset_name=flowers \
+    --dataset_name=ladd \
     --dataset_split_name=train \
     --dataset_dir="${DATASET_DIR}" \
     --model_name="${network_type}" \
@@ -92,7 +92,7 @@ else
   # add other layers by tweaking this flag.
   python train_image_classifier.py \
     --train_dir="${TRAIN_DIR}" \
-    --dataset_name=flowers \
+    --dataset_name=ladd \
     --dataset_split_name=train \
     --dataset_dir="${DATASET_DIR}" \
     --model_name="${network_type}" \

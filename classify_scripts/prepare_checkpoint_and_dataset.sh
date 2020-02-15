@@ -44,10 +44,10 @@ wget -O "${ckpt_name}.tgz" "${ckpt_link}"
 tar zxvf "${ckpt_name}.tgz"
 
 echo "PREPARING dataset ..."
-mkdir "${DATASET_DIR}"
+# mkdir "${DATASET_DIR}"
 cd "${SLIM_DIR}"
 python download_and_convert_data.py \
-  --dataset_name=flowers \
+  --dataset_name=ladd \
   --dataset_dir="${DATASET_DIR}"
 
 echo "CHECKPOINT and dataset available in ${LEARN_DIR}"
